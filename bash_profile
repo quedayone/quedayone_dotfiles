@@ -19,8 +19,9 @@ echo "Welcome to Unix
 echo ""
 echo "You are logged in as:"
 echo -n "-------------------> "; whoami
-echo "On Computer:"
-echo -n "-------------------> "; scutil --get ComputerName
+#	Not working on Ubuntu 15.04
+#	echo "On Computer:"
+#	echo -n "-------------------> "; scutil --get ComputerName
 echo ""
 echo -n "Today is "; date +"%A, %B %d, %Y. %r"
 echo ""
@@ -32,7 +33,10 @@ echo ""
 # ==============================================================================
 echo -n "Your uptime is: " 
 declare -x awk="/usr/bin/awk"
-declare -x sysctl="/usr/sbin/sysctl"
+#	For OSX
+#	declare -x sysctl="/usr/sbin/sysctl"
+#	For Ubuntu 15.04
+declare -x sysctl="/sbin/sysctl"
 declare -x perl="/usr/bin/perl"
 declare -xi DAY=86400
 declare -xi EPOCH="$($perl -e "print time")"
