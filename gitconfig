@@ -1,0 +1,38 @@
+# ==============================================================================
+# gitconfig file
+# Add your name and options
+# ==============================================================================
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+
+# ==============================================================================
+# Add your user info below
+# ==============================================================================
+[user]
+	name = Will Pierce
+	email = qday1@me.com
+	email = core.editor
+
+[core]
+	editor = subl -n -w
+	excludesfile = ~/.gitignore_global
+
+[color]
+	ui = true
+
+[push]
+	default = simple
+
+# ==============================================================================
+# Alias recommendations from Lynda.com Git Essential Training with Kevin Skoglund
+# Setting up aliases for common commands
+# http://www.lynda.com/Git-tutorials/Setting-up-aliases-common-commands/100222/111342-4.html
+# ==============================================================================
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	logg = log --graph --decorate --oneline --abbrev-commit --all
